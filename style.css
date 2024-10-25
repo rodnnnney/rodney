@@ -152,8 +152,9 @@ h1 {
 .cta-text {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
-    background: rgba(155, 184, 88, 0.587);
+    color: white;
+    
+    background: rgb(245, 182, 65);
     padding: 10px 20px; 
     border-radius: 12px; 
     display: inline-block; 
