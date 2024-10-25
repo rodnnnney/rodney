@@ -1,0 +1,160 @@
+/* style.css */
+
+/* style.css */
+
+/* Navigation Styles */
+.main-header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.navbar {
+    margin-top: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #4a6be5;
+}
+
+/* Additional styling for other elements */
+
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+
+/* style.css */
+
+/* Existing styles */
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.app-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.app-section {
+    flex: 1;
+    max-width: 48%;
+    text-align: center;
+}
+
+.app-image {
+    width: 70%; /* 30% smaller */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.app-description {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-description h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* GitHub Button */
+.github-button {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a6be5;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3a5acb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-row {
+        flex-direction: column;
+    }
+
+    .app-section {
+        max-width: 100%;
+    }
+}
+
+/* Add a specific class for bottom padding */
+.bottom-padding {
+    padding-bottom: 2rem; /* Adjust the value as needed */
+}
