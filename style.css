@@ -38,13 +38,36 @@
 /* Additional styling for other elements */
 
 
+
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     color: #333;
+    font-weight: 500;
+}
+
+/* Add this new style for html element */
+html {
+    min-height: 100%;
+    background: linear-gradient(-45deg, #f0f4ff, #B8C6E5, #B8C6E5);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .header {
@@ -162,6 +185,64 @@ h1 {
 
 
 /* Add a specific class for bottom padding */
-.bottom-padding {
-    padding-bottom: 2rem; /* Adjust the value as needed */
+
+
+/* Add this to standardize all link colors */
+a {
+    color: #2563eb; /* A nice blue color */
+    text-decoration: none; /* Removes the underline */
+    transition: color 0.2s ease; /* Smooth color transition for hover */
+}
+
+a:hover {
+    color: #1d4ed8; /* Slightly darker blue on hover */
+}
+
+/* If you have any specific link styles (like in the nav), you might want to override them to match */
+.nav-list a,
+.thoughts-list a,
+.bio a {
+    color: #2563eb;
+}
+
+.nav-list a:hover,
+.thoughts-list a:hover,
+.bio a:hover {
+    color: #1d4ed8;
+}
+
+.wave {
+    display: inline-block;
+    /* Different animation examples: */
+    
+    /* Wave animation (current) */
+    animation: wave 4s infinite;
+    
+    /* Bounce animation */
+    /* animation: bounce 1s infinite; */
+    
+    /* Pulse animation */
+    /* animation: pulse 2s infinite; */
+    
+    /* Shake animation */
+    /* animation: shake 0.5s infinite; */
+    
+    /* Fade animation */
+    /* animation: fade 2s infinite; */
+    
+    /* Spin animation */
+    /* animation: spin 2s infinite linear; */
+    
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
 }
