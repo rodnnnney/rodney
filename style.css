@@ -234,3 +234,12 @@ a {
 .social-icons a {
     text-decoration: none;
 }
+
+.highlight-box {
+    background-color: #dcd8d8;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 80%;
+    text-align: center;
+}
