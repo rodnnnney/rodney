@@ -1,245 +1,196 @@
 .main-header {
-    text-align: center;
-    padding: 1rem 0;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .navbar {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .nav-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .nav-list li {
-    display: inline;
+  display: inline;
 }
 
 .nav-list a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .nav-list a:hover {
-    color: #4a6be5;
+  color: #4a6be5;
 }
 
-
 body {
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.5;
-    max-width: 800px;
-    margin: 0;
-    padding: 40px 40px 40px 80px;
-    color: #333;
-    font-weight: 500;
-    background-color: #F1EEE9;
-    font-size: 1.16rem;
+  /* font-family: "Nunito", sans-serif; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0;
+  padding: 40px 40px 40px 80px;
+  color: #333;
+  font-weight: 500;
+  background-color: #f1eee9;
+  font-size: 1.16rem;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 h1 {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 
 .social-icons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons a {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 15px;
-    }
+  body {
+    padding: 15px;
+  }
 
-    h1 {
-        font-size: 1.75rem;
-    }
+  h1 {
+    font-size: 1.75rem;
+  }
 }
 
-
-/* style.css */
-
-/* Existing styles */
-
 .app-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 .app-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .app-section {
-    flex: 1;
-    max-width: 48%;
-    text-align: center;
+  flex: 1;
+  max-width: 48%;
+  text-align: center;
 }
 
 .app-image {
-    width: 70%; /* 30% smaller */
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
+  width: 70%; /* 30% smaller */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .app-description {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .app-description h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .github-button {
-    text-align: center; /* Center the contents */
-    margin-top: 20px; /* Optional: add some space above */
+  text-align: center;
+  margin-top: 20px;
 }
-
 
 .button:hover {
-    background-color: #3a5acb;
+  background-color: #3a5acb;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .app-row {
-        flex-direction: column;
-    }
+  .app-row {
+    flex-direction: column;
+  }
 
-    .app-section {
-        max-width: 100%;
-    }
+  .app-section {
+    max-width: 100%;
+  }
 }
 
 .cta-section {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .cta-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    background: rgb(245, 182, 65);
-    padding: 10px 20px; 
-    border-radius: 12px; 
-    display: inline-block; 
-    margin: 0 auto; 
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background: rgb(245, 182, 65);
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0 auto;
 }
 
-
-/* Add a specific class for bottom padding */
-
-
-/* Add this to standardize all link colors */
 a {
-    color: #2563eb; /* A nice blue color */
-    text-decoration: none; /* Removes the underline */
-    transition: color 0.2s ease; /* Smooth color transition for hover */
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #1d4ed8; /* Slightly darker blue on hover */
+  color: #1d4ed8;
 }
 
-/* If you have any specific link styles (like in the nav), you might want to override them to match */
 .nav-list a,
 .thoughts-list a,
 .bio a {
-    color: #2563eb;
+  color: #2563eb;
 }
 
 .nav-list a:hover,
 .thoughts-list a:hover,
 .bio a:hover {
-    color: #1d4ed8;
-}
-
-.wave {
-    display: inline-block;
-    /* Different animation examples: */
-    
-    /* Wave animation (current) */
-    animation: wave 4s infinite;
-    
-    /* Bounce animation */
-    /* animation: bounce 1s infinite; */
-    
-    /* Pulse animation */
-    /* animation: pulse 2s infinite; */
-    
-    /* Shake animation */
-    /* animation: shake 0.5s infinite; */
-    
-    /* Fade animation */
-    /* animation: fade 2s infinite; */
-    
-    /* Spin animation */
-    /* animation: spin 2s infinite linear; */
-    
-    transform-origin: 70% 70%;
-}
-
-@keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+  color: #1d4ed8;
 }
 
 a[href]:not(.nav-list a):not(.social-icons a)::after {
-    content: " ↗";
-    display: inline-block;
-    margin-left: 2px;
-    font-size: 0.4em;
+  content: " ↗";
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.4em;
 }
 
 a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-/* Keep social icons without underline */
+
 .social-icons a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .highlight-box {
-    background-color: #dcd8d8;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 10px auto;
-    max-width: 80%;
-    text-align: center;
+  background-color: #dcd8d8;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 80%;
+  text-align: center;
 }
