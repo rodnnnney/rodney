@@ -153,9 +153,6 @@ h1 {
   margin: 0 auto;
 }
 
-/* Add a specific class for bottom padding */
-
-/* Add this to standardize all link colors */
 a {
   color: #2563eb; /* A nice blue color */
   text-decoration: none; /* Removes the underline */
@@ -166,7 +163,6 @@ a:hover {
   color: #1d4ed8; /* Slightly darker blue on hover */
 }
 
-/* If you have any specific link styles (like in the nav), you might want to override them to match */
 .nav-list a,
 .thoughts-list a,
 .bio a {
@@ -213,4 +209,127 @@ a {
   font-weight: normal;
   font-size: 0.8em;
   font-style: italic;
+}
+
+.bullet-point {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.bullet-point::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+.bullet-group {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-btn {
+  background-color: transparent;
+  color: #333;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.dropdown-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.dropdown-content {
+  display: block;
+  padding: 10px 0;
+  margin-top: 10px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-10px);
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  max-height: 1000px;
+  overflow: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.bullet-group {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.bullet-point {
+  margin-bottom: 8px;
+}
+
+.bullet-point p {
+  margin: 0;
+}
+
+.bullet-point a {
+  text-decoration: none;
+  color: #0066cc;
+  transition: color 0.2s ease;
+}
+
+.bullet-point a:hover {
+  color: #004080;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.quote-block {
+  border-left: 4px solid #ccc;
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  font-style: italic;
+}
+
+.quote-block p {
+  margin: 0;
 }
