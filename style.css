@@ -328,8 +328,17 @@ a {
   margin: 1.5em 0;
   padding: 0.5em 1em;
   font-style: italic;
+  background-color: #e9e7e3;
 }
 
 .quote-block p {
   margin: 0;
+}
+
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;  /* or any color you prefer */
+  margin: 20px 0;  /* adjust spacing as needed */
 }
