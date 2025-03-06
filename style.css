@@ -79,36 +79,50 @@ h1 {
 /* Existing styles */
 
 .app-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 1rem;
+  width: 100%;
+  margin: 2rem 0;
 }
 
 .app-row {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .app-section {
-  flex: 1;
-  max-width: 48%;
+  aspect-ratio: 1 / 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .app-image {
-  width: 70%; /* 30% smaller */
+  width: 80%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 0.5rem;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
 }
 
 .app-description {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
 }
 
 .app-description h2 {
@@ -117,15 +131,14 @@ h1 {
 }
 
 .github-button {
-  text-align: center; /* Center the contents */
-  margin-top: 20px; /* Optional: add some space above */
+  text-align: center;
+  margin-top: 20px;
 }
 
 .button:hover {
   background-color: #3a5acb;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .app-row {
     flex-direction: column;
@@ -133,6 +146,8 @@ h1 {
 
   .app-section {
     max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1rem;
   }
 }
 
@@ -154,13 +169,13 @@ h1 {
 }
 
 a {
-  color: #2563eb; /* A nice blue color */
-  text-decoration: none; /* Removes the underline */
-  transition: color 0.2s ease; /* Smooth color transition for hover */
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #1d4ed8; /* Slightly darker blue on hover */
+  color: #1d4ed8;
 }
 
 .nav-list a,
@@ -335,10 +350,21 @@ a {
   margin: 0;
 }
 
-
 hr {
   border: 0;
   height: 1px;
-  background-color: #ccc;  /* or any color you prefer */
-  margin: 20px 0;  /* adjust spacing as needed */
+  background-color: #ccc; /* or any color you prefer */
+  margin: 20px 0; /* adjust spacing as needed */
+}
+
+@media (min-width: 768px) {
+  .app-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
