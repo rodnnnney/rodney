@@ -81,10 +81,11 @@
         I'm also building
         <a href="carletonbchain.html">Carleton Blockchain</a>, a student club
         empowering students to become the next builders and innovators onchain.
-        So far, we've grown from 0-174 active club members in just
+        So far, we've grown from <i><b>0-200</b></i> active club members in just
         <span id="dayCounter"></span> days of operation.
         <script>
-          const startDate = new Date("2024-11-1");
+          // Using ISO format YYYY-MM-DD for better cross-browser compatibility
+          const startDate = new Date("2024-11-01T00:00:00");
           const today = new Date();
           const diffTime = Math.abs(today - startDate);
           const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
