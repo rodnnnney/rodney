@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Lumalytics?</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="utils/readingTime.js"></script>
+    <script src="utils/articleUtils.js"></script>
+    
+    <style>
+      /* Fullscreen image modal styles */
+      .fullscreen-img {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      
+      .fullscreen-img:hover {
+        transform: scale(1.05);
+      }
+      
+      .fullscreen-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .fullscreen-modal.visible {
+        display: flex;
+      }
+      
+      .fullscreen-content {
+        max-width: 90%;
+        max-height: 90%;
+      }
+      
+      .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Create modal container for fullscreen images
+        const modal = document.createElement('div');
+        modal.className = 'fullscreen-modal';
+        
+        const modalContent = document.createElement('img');
+        modalContent.className = 'fullscreen-content';
+        
+        const closeBtn = document.createElement('span');
+        closeBtn.className = 'modal-close';
+        closeBtn.innerHTML = '&times;';
+        
+        modal.appendChild(closeBtn);
+        modal.appendChild(modalContent);
+        document.body.appendChild(modal);
+        
+        // Add click event to all images with fullscreen-img class
+        const fullscreenImages = document.querySelectorAll('.fullscreen-img');
+        fullscreenImages.forEach(img => {
+          img.addEventListener('click', function() {
+            modalContent.src = this.src;
+            modal.classList.add('visible');
+          });
+        });
+        
+        // Close modal when clicking close button or outside the image
+        closeBtn.addEventListener('click', function() {
+          modal.classList.remove('visible');
+        });
+        
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.classList.remove('visible');
+          }
+        });
+        
+        // Close on escape key press
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.classList.contains('visible')) {
+            modal.classList.remove('visible');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="../../index.html">rodney.lol</a></li>
+          <div class="social-icons">
+            <a href="https://github.com/rodnnnney" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                alt="GitHub"
+                width="28"
+                height="28"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/rodneyshenn/" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Linkedin-logo-blue-In-square-40px.png"
+                alt="LinkedIn"
+                width="28"
+                height="28"
+              />
+            </a>
+            <a href="https://x.com/992rodney" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg"
+                width="28"
+                height="28"
+              />
+            </a>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="header">
+        <h1>Lumalytics - Analytics platform for Luma Hosts</h1>
+        <p>~ 3 min read</p>
+    </div>
+
+
+    <p>I've been using Luma for Carleton Blockchain events now for the past semester and 
+        it has been amazing. From the user experience to the host experience, the team at Luma has made such an incredible app from the UI and UX perspective. It makes my life incredibly easy.
+     </p>
+
+     <p>
+        My one complaint is that its post-event analytics isn't the best. It's not bad, but compared to the rest of the app, I and many other hosts on Luma feel this way.
+     </p>
+
+     <img src="https://ipfs.jackallabs.io/ipfs/bafybeicwlqoox54gkzz3hajm56zvlacpnejc6celnoz537pi7j3wtjq3ee?filename=luma.png" class="article-img-s fullscreen-img" />
+     <img src="https://ipfs.jackallabs.io/ipfs/bafybeih6vp4xcq2rvcewmtvtg4jwfsrctzebk3xtnx66wlmi633mnhoyoi?filename=ppl.png" class="article-img-s fullscreen-img" />
+
+     <p>This is the insights tab for Carleton Blockchain as well as the peoples tab.</p>
+
+     <p>First off, I think the insights tab really doesn't tell you a whole lot. I think the most useful state offered there is UTM source and location of your guests.</p>
+
+     <p>I believe that the peoples tab is a bit better, I think a great insight is being able to filter
+         by event check-in attendance per attendee. This is a great measure to see who is a dedicated member. I would love if the
+          information were formatted perhaps in the row corresponding to the user instead of having to filter by it directly. There's a lot of blank space and I think it could 
+          help hosts visualize data better together. </p>
+    
+<h3>Solution?</h3>
+
+<p>Lumalytics. I built Lumalytics in the past 1-2 months (multiple painful backend iterations). One great thing about Luma is that they allow hosts to access CSVs of events in your calendars. These CSVs are incredibly data rich and can provide hosts with amazing insights if combined together. </p>
+
+<img src="https://ipfs.jackallabs.io/ipfs/bafybeihk6armatoxnt55whohfyopfid52t2d2bpp4oxcletiiqsp5uhit4?filename=dash.png" class="article-img-s fullscreen-img" />
+<img src="https://ipfs.jackallabs.io/ipfs/bafybeie7ey7mjig5cqzveubtpjwg3salrsisx3fq5mkmmapjmsfgt5ofnu?filename=events.png" class="article-img-s fullscreen-img" />
+<img src="https://ipfs.jackallabs.io/ipfs/bafybeidrrtpfqmmlebigbg6rjt44axceownxbeupxks2sgzcy33relbycq?filename=users.png" class="article-img-s fullscreen-img" />
+
+<p>Basically, all Lumalytics is a web app that parses all the CSVs, and provides much more detail and specific insights about your event calendar (without requiring internal APIs!). It shows basic stats such as RSVP vs checkin ratio, checkin rate, return rate (I like this one). 
+    One of my favourite features is how we handle additional fields. In Luma, when you set an up event, you can take additional info from the user. This can include student numbers, linkedins accounts, Githubs accounts, etc. In the CSVs, there are 23 default fields, if you add additional fields, that events csv will simply have 24 or 23 + x where x is the amount of additional questions you asked. 
+    This is cool because we are able to associated all this additional information with that user in one place. (Ex. Third image above)
+</p>
+
+<p>I love hosting events on Luma, and Lumalytics is just a tool I made to help run my events better. Made for Luma Hosts by Luma Hosts with ❤️ (and Claude).</p>
+
+<p>You can check it out for yourself below:</p>
+<div class="link-container">
+  <a href="https://www.lumalytics.app/" class="app-link">Lumalytics.app</a>
+</div>
+<div class="link-container">
+  <a href="https://docs.lumalytics.app/introduction" class="docs-link">Lumalytics Docs</a>
+</div>
+
+  </body> 
+</html>
