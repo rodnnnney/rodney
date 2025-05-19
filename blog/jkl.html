@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jackal Labs</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../utils/readingTime.js"></script>
+    <script src="../utils/articleUtils.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="../index.html">rodney.lol</a></li>
+          <div class="social-icons">
+            <a href="https://github.com/rodnnnney" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                alt="GitHub"
+                width="28"
+                height="28"
+              />
+            </a>
+            <a href="https://x.com/992rodney" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg"
+                width="28"
+                height="28"
+              />
+            </a>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="header">
+      <h1>Jackal Labs</h1>
+      <p>~ 3 min read</p>
+    </div>
+
+    <div class="app-intro">
+        Working at Jackal Labs was quite an experience. This was my first coop in the web3 but it was incredible. 
+        For context, Jackal Labs is a depin(decentralized physical infrastructure) startup building infrasture for self custodial storage. 
+        Imagine Google Drive but self custodial and decentralized. Files would tied to your private key and only you can access it. Not even Jackal Labs can access it.
+    </div>
+
+    <p>
+        We were a small team, consisting of about 10 full time engineers/designers/bd. I was part of intern class consisting of 2 other interns. Shoutout Anthony and Zayaan.
+    </p>
+
+    <p>
+        I would say my favourite part about working at Jackal Labs was the chill people, everything there was pretty young and fun, as well as the amount of freedom I was given to ship products from 0-1.
+    </p>
+
+    <p>
+        I worked on 6 distinct products during my time there. In total, I had <span style="color: #f0ad4e;">149 commits</span>, added<span style="color: #28a745;"> 
+        33,827</span> lines of code, and removed<span style="color: #dc3545;"> 12,765</span> lines of code
+        (yeah i might be a bit inflated due to config files, boilerplate code and cursor but I was shipping a lot).
+
+        You can check it out yourself <a href="https://github.com/JackalLabs" target="_blank">here</a>.
+    </p>
+
+    <p>
+        Some of my favourite products I worked on were:
+    </p>
+
+    <h4>Base Outposts</h4>
+
+    <p>
+        Base outposts was a relay layer that would allow developers on Base to interact with Jackal while only interacting with EVM compatible contracts. It's really neat to see the flexbility and interoperability that you can build onchain. 
+    </p>
+
+    <p>
+        Here's a preview of what Base Outposts looks like in action:
+    </p>
+
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <iframe 
+            src="https://based-demo.jackalprotocol.com/shared/137227d1cac3f114fc57ee298e658133d5096706d6f77c24f468e3b49d49743db2c5a2afdcbb0f8eff29d02aa388777c7414b42007e66e967767380242709bdd?index=1&blockheight=29370945"
+            style="width: 100%; height: 500px; border: 1px solid #ddd; border-radius: 4px;"
+            title="Base Outposts Demo"
+        ></iframe>
+    </div>
+
+    <h4>Jackal Pin</h4>
+    <p>
+     For context, Jackal works as a marketplace for storage. Users can rent out their storage to the chain and be compensated in $JKL. On the flip side, users can purchase storage from the chain in $JKL. 
+        Typically, when you put your files on Jackal, they would be fully encrypted and only you can access it. Jackal Pin is different, storage providers are default are IPFS compatible to allow faster access times but by default are encrypted. 
+        Files put on Pin are fully accessible to the public, this is ideal for projects that want to store their data onchain and be accessible to the public. One big usecase we had were NFT collections on Cosmos. 
+        I remember we had 9/10 biggest NFT collections storing their image files with us.
+    </p>
+
+
+    <h4>Crypto payment rails</h4>
+    <p>As part of the Jackal Pin product, we also built crypto payment rails for users to pay for storage in ETH, USDC and Dai. This project made me realize that working in web3 is pretty similar to working in web2. I tell my friends that the only difference is that
+         instead of calling and endpoint, you are calling a smart contract. Instead of signing requests with an API key, you are signing transactions with your private key. Instead of deploying your backend or db to a server, you are deploying contracts to a blockchain.
+    </p>
+
+    <p> On a high level, the way the payment rails worked was that users send crypto and an uuid associated with their storage account to a smart contract that we owned.
+        We had an websocket listening to that transactions being sent to that contract, once we detected a transaction, we would check if the uuid was associated with any storage on Jackal. 
+        We had logic built into the smart contract to make sure they were sending the right amount and once they did, we would upgrade the user account storage in the same db where users who paid with Stripe were stored. It was a really simple project but it taught a lot. 
+        You might think that broadcast your uuid asscoated with your Jackal account over the blockchain is a bad idea, however, the only thing you can do with this is purchase storage for that given account. If someone were to get access to your uuid, they would only be able to purchase storage for your account.
+    </p>
+
+
+    
+
+    <div class="app-content bottom-padding"></div>
+  </body>
+</html>
